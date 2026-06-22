@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REBARATOZ automates RCC reinforcement detailing (drafting) for structural engineers, generating slab, beam, column, and staircase layouts in CAD.">
+  <title>REBARATOZ - Structural Reinforcement Detailing Automation</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo-link">
+        <!-- Logo file placeholder, will display logo.png directly -->
+        <img src="assets/logo.png" alt="REBARATOZ Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav" id="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#features" class="nav-link">About Us</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions" id="nav-actions">
+        <a href="#pricing" class="btn btn-outline">Get Started</a>
+      </div>
+
+      <button class="menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content reveal-item revealed">
+        <span class="hero-identity">REBARATOZ — Your Digital Reinforcement Draftsman</span>
+        <h1>Automation Solutions for Individual House Construction</h1>
+        <p>
+          REBARATOZ helps structural engineers create reinforcement drawings automatically — generating slab, beam, column, and staircase reinforcement layouts in minutes instead of hours of manual drafting, with fully editable CAD output.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">Get Started</a>
+          <a href="#features" class="btn btn-outline-white">Explore Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What REBARATOZ Does -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="badge">Features</span>
+        <h2>What REBARATOZ Does</h2>
+        <p>A comprehensive RCC detailing automation engine tailored for structural design consultants and draftsmen.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal-item reveal-delay-1">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h8v2H8v-2z"/>
+            </svg>
+          </div>
+          <h3>Slab Reinforcement</h3>
+          <p>Generates detailed top and bottom bar layouts, crank details, and distribution steel for one-way and two-way slabs, conforming to building code requirements.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card reveal-item reveal-delay-2">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M2 9h20v6H2V9zm2 2v2h16v-2H4z"/>
+            </svg>
+          </div>
+          <h3>Beam Reinforcement</h3>
+          <p>Creates complete longitudinal elevations and cross-sections of beams, detailing continuous support rebars, stirrups spacing zones, and curtailment zones.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card reveal-item reveal-delay-3">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M8 2h8v20H8V2zm2 2v14h4V4h-4zm0 16h4v2h-4v-2z"/>
+            </svg>
+          </div>
+          <h3>Column Reinforcement</h3>
+          <p>Details column vertical reinforcement main bars and lateral ties, managing lap splice zones, column dimensions, and coordinate-grid alignments automatically.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card reveal-item">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4H7v2h8c1.1 0 2-.9 2-2v-4zm0-2V9c0-1.1-.9-2-2-2h-4v4h6z"/>
+            </svg>
+          </div>
+          <h3>Staircase Reinforcement</h3>
+          <p>Draws flight profiles of dog-legged and open-well staircases, complete with flight waist slab detailing, landing bars, and proper anchorage lengths.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card reveal-item reveal-delay-1">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+          </div>
+          <h3>Editable CAD Output</h3>
+          <p>Export drawings directly to standard DXF format, readable and fully editable in AutoCAD, BricsCAD, ZWCAD, or other industry CAD drafting platforms.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card reveal-item reveal-delay-2">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+            </svg>
+          </div>
+          <h3>Reduces Repetitive Work</h3>
+          <p>Eliminate the tedious task of drawing hundreds of reinforcement lines, stirrups zones, and drawing dimensions manually from scratch.</p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-card reveal-item reveal-delay-3">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.79L11 12.5V7h1.5v4.78l3.75 2.25-.76 1.26z"/>
+            </svg>
+          </div>
+          <h3>Improves Productivity</h3>
+          <p>Turn weeks of manual drafting cycles into minutes of structured checking. Deliver project drawings faster to clients and boost engineering throughput.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: About Us (Vision & Mission) -->
+  <section class="section section-dark" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-item">
+          <span class="badge">Our Philosophy</span>
+          <h2>Empowering Engineers, Automating Detailing</h2>
+          <p>
+            At REBARATOZ, we bridge the gap between engineering design analysis and finalized CAD drafting. We understand that detailing concrete structures is time-consuming yet requires precise compliance with safety guidelines.
+          </p>
+          <p>
+            Our software allows structural consultants to maintain full review control while offloading the manual drawing mechanics to an intelligent automation engine.
+          </p>
+          <a href="#contact" class="btn btn-outline">Talk to Our Team</a>
+        </div>
+        
+        <div class="about-cards reveal-item reveal-delay-2">
+          <!-- Vision Statement -->
+          <div class="statement-card">
+            <h3>
+              <svg width="24" height="24" fill="var(--color-primary)" viewBox="0 0 24 24">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+              </svg>
+              Our Vision
+            </h3>
+            <p>To become the most trusted reinforcement detailing automation platform for structural engineers worldwide.</p>
+          </div>
+          
+          <!-- Mission Statement -->
+          <div class="statement-card statement-card-accent">
+            <h3>
+              <svg width="24" height="24" fill="var(--color-accent)" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+              </svg>
+              Our Mission
+            </h3>
+            <p>To automate repetitive RCC detailing tasks while maintaining engineering control and drawing accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Portfolio Section -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="badge">Portfolio Gallery</span>
+        <h2>Auto-Generated CAD Drawings</h2>
+        <p>Explore real-world structural drawing samples generated entirely using the REBARATOZ automation engine.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="portfolio-tabs reveal-item">
+        <button class="portfolio-tab active" data-target="slab-reinforcement">Slab Reinforcement</button>
+        <button class="portfolio-tab" data-target="beam-reinforcement">Beam Reinforcement</button>
+        <button class="portfolio-tab" data-target="column-reinforcement">Column Reinforcement</button>
+        <button class="portfolio-tab" data-target="staircase-reinforcement">Staircase Reinforcement</button>
+      </div>
+
+      <!-- Portfolio Panels -->
+      <div class="portfolio-panels reveal-item">
+        
+        <!-- Panel 1: Slab Reinforcement -->
+        <div class="portfolio-panel active" id="slab-reinforcement">
+          <div class="portfolio-grid">
+            <!-- 4 beautiful detailed SVG blueprints representing slabs -->
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <grid stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="50" y1="50" x2="750" y2="50" stroke="#8E9BA8" stroke-width="2"/>
+                <line x1="50" y1="450" x2="750" y2="450" stroke="#8E9BA8" stroke-width="2"/>
+                <line x1="50" y1="50" x2="50" y2="450" stroke="#8E9BA8" stroke-width="2"/>
+                <line x1="750" y1="50" x2="750" y2="450" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Rebar lines in Orange -->
+                <path d="M 50 100 L 700 100 L 750 80" fill="none" stroke="#C75D2C" stroke-width="3" stroke-dasharray="none"/>
+                <path d="M 750 150 L 100 150 L 50 170" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 50 200 L 700 200 L 750 180" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 750 250 L 100 250 L 50 270" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <!-- Rebar dots and links -->
+                <circle cx="200" cy="100" r="4" fill="#C75D2C"/>
+                <circle cx="400" cy="100" r="4" fill="#C75D2C"/>
+                <circle cx="600" cy="100" r="4" fill="#C75D2C"/>
+                <circle cx="200" cy="200" r="4" fill="#C75D2C"/>
+                <circle cx="400" cy="200" r="4" fill="#C75D2C"/>
+                <circle cx="600" cy="200" r="4" fill="#C75D2C"/>
+                <!-- CAD Labels -->
+                <text x="320" y="85" fill="#FFFFFF" font-family="monospace" font-size="12">T12 @ 150 c/c (TOP)</text>
+                <text x="320" y="135" fill="#FFFFFF" font-family="monospace" font-size="12">T10 @ 200 c/c (BTM)</text>
+                <text x="70" y="420" fill="#8E9BA8" font-family="monospace" font-size="14">SLAB S1 - 150mm THICK</text>
+                <text x="600" y="420" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #01</span>
+                <h4>Slab S1 - Reinforcement Plan</h4>
+              </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <line x1="100" y1="100" x2="700" y2="100" stroke="#8E9BA8" stroke-width="1" stroke-dasharray="5,5"/>
+                <line x1="100" y1="400" x2="700" y2="400" stroke="#8E9BA8" stroke-width="1" stroke-dasharray="5,5"/>
+                <!-- Cranked bars -->
+                <path d="M 100 350 L 250 350 L 300 300 L 500 300 L 550 350 L 700 350" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 100 280 L 220 280 L 270 330 L 530 330 L 580 280 L 700 280" fill="none" stroke="#2c537d" stroke-width="2.5"/>
+                <text x="330" y="270" fill="#FFFFFF" font-family="monospace" font-size="12">T10 @ 180 c/c CRANK</text>
+                <text x="120" y="425" fill="#8E9BA8" font-family="monospace" font-size="14">SLAB S2 - CRANK ELEVATION DETAIL</text>
+                <text x="600" y="425" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #02</span>
+                <h4>Slab S2 - Cross-Section Detailing</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <circle cx="400" cy="250" r="180" stroke="#8E9BA8" stroke-width="2" fill="none"/>
+                <!-- Circular mesh -->
+                <path d="M 250 250 L 550 250 M 400 100 L 400 400 M 270 200 L 530 200 M 270 300 L 530 300" stroke="#C75D2C" stroke-width="2"/>
+                <path d="M 300 150 L 300 350 M 500 150 L 500 350" stroke="#C75D2C" stroke-width="2"/>
+                <text x="310" y="80" fill="#FFFFFF" font-family="monospace" font-size="12">CIRCULAR SLAB S3 (DOME BASE)</text>
+                <text x="320" y="240" fill="#FFFFFF" font-family="monospace" font-size="12">T12 @ 150 c/c MESH</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #03</span>
+                <h4>Slab S3 - Circular Slab Mesh Layout</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Cantilever Slab blueprint -->
+                <path d="M 50 150 L 450 150 L 450 400 L 50 400 Z" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <path d="M 450 150 L 700 180 L 700 280 L 450 300" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Cantilever main top anchor rebars -->
+                <path d="M 300 170 L 680 200 L 685 240" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 300 380 L 470 380 L 675 260" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <text x="490" y="160" fill="#FFFFFF" font-family="monospace" font-size="12">T16 @ 100 (CANTILEVER TENSION)</text>
+                <text x="80" y="440" fill="#8E9BA8" font-family="monospace" font-size="14">CANTILEVER BALCONY CHAJJA DETAIL</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #04</span>
+                <h4>Slab S4 - Cantilever Detailing</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Beam Reinforcement -->
+        <div class="portfolio-panel" id="beam-reinforcement">
+          <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Column blocks -->
+                <rect x="80" y="50" width="80" height="400" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <rect x="640" y="50" width="80" height="400" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <rect x="160" y="150" width="480" height="200" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Beam rebars -->
+                <line x1="50" y1="180" x2="750" y2="180" stroke="#C75D2C" stroke-width="4"/>
+                <line x1="50" y1="320" x2="750" y2="320" stroke="#C75D2C" stroke-width="4"/>
+                <!-- Stirrups -->
+                <line x1="180" y1="180" x2="180" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="200" y1="180" x2="200" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="220" y1="180" x2="220" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="250" y1="180" x2="250" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="290" y1="180" x2="290" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="340" y1="180" x2="340" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="400" y1="180" x2="400" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="460" y1="180" x2="460" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="510" y1="180" x2="510" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="550" y1="180" x2="550" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="580" y1="180" x2="580" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="600" y1="180" x2="600" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <line x1="620" y1="180" x2="620" y2="320" stroke="#2c537d" stroke-width="2"/>
+                <!-- Callouts -->
+                <text x="280" y="130" fill="#FFFFFF" font-family="monospace" font-size="12">3-T20 TOP CONTINUOUS</text>
+                <text x="280" y="380" fill="#FFFFFF" font-family="monospace" font-size="12">3-T25 BOTTOM CONTINUOUS</text>
+                <text x="180" y="270" fill="#C75D2C" font-family="monospace" font-size="11" transform="rotate(-90 180 270)">T8 @ 100 c/c</text>
+                <text x="400" y="270" fill="#C75D2C" font-family="monospace" font-size="11" transform="rotate(-90 400 270)">T8 @ 200 c/c</text>
+                <text x="180" y="440" fill="#8E9BA8" font-family="monospace" font-size="14">BEAM B1 - LONGITUDINAL SECTION</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #05</span>
+                <h4>Continuous Beam B1 - Longitudinal Elevation</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Beam cross section -->
+                <rect x="250" y="80" width="300" height="340" fill="none" stroke="#8E9BA8" stroke-width="3"/>
+                <!-- Stirrup tie -->
+                <rect x="265" y="95" width="270" height="310" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <!-- Rebar dots -->
+                <circle cx="280" cy="110" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="110" r="10" fill="#C75D2C"/>
+                <circle cx="520" cy="110" r="12" fill="#C75D2C"/>
+                <circle cx="280" cy="390" r="16" fill="#C75D2C"/>
+                <circle cx="400" cy="390" r="16" fill="#C75D2C"/>
+                <circle cx="520" cy="390" r="16" fill="#C75D2C"/>
+                <!-- Texts -->
+                <text x="320" y="55" fill="#FFFFFF" font-family="monospace" font-size="14">BEAM B1 MIDSPAN SECTION</text>
+                <text x="560" y="115" fill="#8E9BA8" font-family="monospace" font-size="12">2-T20 + 1-T16 (TOP)</text>
+                <text x="560" y="395" fill="#8E9BA8" font-family="monospace" font-size="12">3-T25 (BOTTOM)</text>
+                <text x="130" y="260" fill="#8E9BA8" font-family="monospace" font-size="12">STIRRUP T8-150 c/c</text>
+                <text x="600" y="450" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #06</span>
+                <h4>Beam B1 - Cross-Sectional Detail</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Plinth beam grid -->
+                <path d="M 80 150 L 720 150 M 80 350 L 720 350 M 200 80 L 200 420 M 580 80 L 580 420" stroke="#8E9BA8" stroke-width="2" stroke-dasharray="10,5"/>
+                <!-- Intersection nodes -->
+                <circle cx="200" cy="150" r="18" fill="none" stroke="#C75D2C" stroke-width="2"/>
+                <circle cx="580" cy="150" r="18" fill="none" stroke="#C75D2C" stroke-width="2"/>
+                <circle cx="200" cy="350" r="18" fill="none" stroke="#C75D2C" stroke-width="2"/>
+                <circle cx="580" cy="350" r="18" fill="none" stroke="#C75D2C" stroke-width="2"/>
+                <text x="90" y="130" fill="#FFFFFF" font-family="monospace" font-size="12">GRID A</text>
+                <text x="90" y="330" fill="#FFFFFF" font-family="monospace" font-size="12">GRID B</text>
+                <text x="215" y="95" fill="#FFFFFF" font-family="monospace" font-size="12">GRID 1</text>
+                <text x="595" y="95" fill="#FFFFFF" font-family="monospace" font-size="12">GRID 2</text>
+                <text x="230" y="240" fill="#C75D2C" font-family="monospace" font-size="14">PLINTH BEAM PB1 LAYOUT</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #07</span>
+                <h4>Plinth Beam Layout - Grid Coordinate Alignment</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Cantilever beam support detailing -->
+                <path d="M 50 100 L 400 100 L 700 100 M 50 300 L 400 300 L 400 450" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Anchor rebar curved into support column -->
+                <path d="M 680 120 L 430 120 C 410 120 410 280 410 420" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 300 280 L 680 140" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <text x="440" y="90" fill="#FFFFFF" font-family="monospace" font-size="12">CANTILEVER BEAM OUTRIGGER</text>
+                <text x="445" y="160" fill="#FFFFFF" font-family="monospace" font-size="12">ANCHORAGE Ld = 50xDIA</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #08</span>
+                <h4>Cantilever Beam B2 - Anchorage Detail</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Column Reinforcement -->
+        <div class="portfolio-panel" id="column-reinforcement">
+          <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Column C1 Section -->
+                <rect x="260" y="100" width="280" height="280" fill="none" stroke="#8E9BA8" stroke-width="3"/>
+                <rect x="275" y="115" width="250" height="250" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <!-- 8 vertical bars -->
+                <circle cx="290" cy="130" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="130" r="12" fill="#C75D2C"/>
+                <circle cx="510" cy="130" r="12" fill="#C75D2C"/>
+                <circle cx="290" cy="240" r="12" fill="#C75D2C"/>
+                <circle cx="510" cy="240" r="12" fill="#C75D2C"/>
+                <circle cx="290" cy="350" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="350" r="12" fill="#C75D2C"/>
+                <circle cx="510" cy="350" r="12" fill="#C75D2C"/>
+                <!-- Diamond inner tie -->
+                <path d="M 400 130 L 510 240 L 400 350 L 290 240 Z" fill="none" stroke="#2c537d" stroke-width="1.5"/>
+                <!-- Labels -->
+                <text x="290" y="65" fill="#FFFFFF" font-family="monospace" font-size="14">COLUMN C1 (400x400mm) - 8 BARS</text>
+                <text x="560" y="135" fill="#8E9BA8" font-family="monospace" font-size="12">8-T20 MAIN REBARS</text>
+                <text x="560" y="245" fill="#8E9BA8" font-family="monospace" font-size="12">T8 @ 150 c/c TIES</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #09</span>
+                <h4>Column C1 - Standard Square Section</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Rectangular Column Section C2 -->
+                <rect x="200" y="120" width="400" height="240" fill="none" stroke="#8E9BA8" stroke-width="3"/>
+                <rect x="215" y="135" width="370" height="210" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <!-- Main bars -->
+                <circle cx="230" cy="150" r="12" fill="#C75D2C"/>
+                <circle cx="315" cy="150" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="150" r="12" fill="#C75D2C"/>
+                <circle cx="485" cy="150" r="12" fill="#C75D2C"/>
+                <circle cx="570" cy="150" r="12" fill="#C75D2C"/>
+                <circle cx="230" cy="330" r="12" fill="#C75D2C"/>
+                <circle cx="315" cy="330" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="330" r="12" fill="#C75D2C"/>
+                <circle cx="485" cy="330" r="12" fill="#C75D2C"/>
+                <circle cx="570" cy="330" r="12" fill="#C75D2C"/>
+                <!-- Internal crossties -->
+                <line x1="315" y1="150" x2="315" y2="330" stroke="#2c537d" stroke-width="1.5"/>
+                <line x1="485" y1="150" x2="485" y2="330" stroke="#2c537d" stroke-width="1.5"/>
+                <!-- Texts -->
+                <text x="240" y="80" fill="#FFFFFF" font-family="monospace" font-size="14">COLUMN C2 (300x600mm) - 10 BARS</text>
+                <text x="220" y="420" fill="#8E9BA8" font-family="monospace" font-size="12">10-T25 MAIN BARS + T8@120 LINKS</text>
+                <text x="600" y="450" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #10</span>
+                <h4>Column C2 - Rectangular Section Detailing</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Circular Column C3 Section -->
+                <circle cx="400" cy="240" r="150" fill="none" stroke="#8E9BA8" stroke-width="3"/>
+                <circle cx="400" cy="240" r="130" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <!-- 8 circular bars -->
+                <circle cx="400" cy="110" r="12" fill="#C75D2C"/>
+                <circle cx="492" cy="148" r="12" fill="#C75D2C"/>
+                <circle cx="530" cy="240" r="12" fill="#C75D2C"/>
+                <circle cx="492" cy="332" r="12" fill="#C75D2C"/>
+                <circle cx="400" cy="370" r="12" fill="#C75D2C"/>
+                <circle cx="308" cy="332" r="12" fill="#C75D2C"/>
+                <circle cx="270" cy="240" r="12" fill="#C75D2C"/>
+                <circle cx="308" cy="148" r="12" fill="#C75D2C"/>
+                <!-- Circular helical ties spiral note -->
+                <path d="M 400 240 L 580 180" stroke="#8E9BA8" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <text x="590" y="175" fill="#FFFFFF" font-family="monospace" font-size="12">SPIRAL TIES (HELI-BINDING)</text>
+                <text x="260" y="60" fill="#FFFFFF" font-family="monospace" font-size="14">CIRCULAR COLUMN C3 (DIA 450mm)</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #11</span>
+                <h4>Column C3 - Circular Section with Spiral Ties</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Column vertical profile / splicing -->
+                <line x1="300" y1="50" x2="300" y2="450" stroke="#8E9BA8" stroke-width="2"/>
+                <line x1="460" y1="50" x2="460" y2="450" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Floor slabs -->
+                <rect x="150" y="220" width="460" height="30" fill="#2c537d" opacity="0.3"/>
+                <!-- Rebar lap splice -->
+                <path d="M 330 450 L 330 250 L 320 220 L 320 50" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <path d="M 335 240 L 335 50" fill="none" stroke="#2c537d" stroke-width="2"/>
+                <!-- Splicing label -->
+                <text x="370" y="200" fill="#FFFFFF" font-family="monospace" font-size="12">LAP SPLICE ZONE (50d)</text>
+                <text x="480" y="240" fill="#8E9BA8" font-family="monospace" font-size="11">FIRST FLOOR LEVEL</text>
+                <text x="160" y="430" fill="#8E9BA8" font-family="monospace" font-size="14">COLUMN ELEVATION - LAP DETAIL</text>
+                <text x="600" y="430" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #12</span>
+                <h4>Column elevation - Lap Joint Splicing Detail</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: Staircase Reinforcement -->
+        <div class="portfolio-panel" id="staircase-reinforcement">
+          <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Stair Profile -->
+                <path d="M 50 400 L 250 400 L 300 350 L 350 350 L 400 300 L 450 300 L 500 250 L 700 250 L 700 300 L 520 300 L 470 350 L 420 350 L 370 400 L 320 400 L 270 450 L 50 450 Z" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Main rebar inside waist slab -->
+                <path d="M 50 425 L 245 425 L 490 280 L 700 280" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <!-- Distribution rebars (circles) -->
+                <circle cx="100" cy="425" r="4" fill="#2c537d"/>
+                <circle cx="150" cy="425" r="4" fill="#2c537d"/>
+                <circle cx="200" cy="425" r="4" fill="#2c537d"/>
+                <circle cx="280" cy="400" r="4" fill="#2c537d"/>
+                <circle cx="330" cy="370" r="4" fill="#2c537d"/>
+                <circle cx="380" cy="340" r="4" fill="#2c537d"/>
+                <circle cx="430" cy="310" r="4" fill="#2c537d"/>
+                <circle cx="530" cy="280" r="4" fill="#2c537d"/>
+                <circle cx="600" cy="280" r="4" fill="#2c537d"/>
+                <text x="180" y="320" fill="#FFFFFF" font-family="monospace" font-size="12">MAIN BARS T12 @ 120 c/c</text>
+                <text x="500" y="210" fill="#FFFFFF" font-family="monospace" font-size="12">MID-LANDING WAIST SLAB</text>
+                <text x="80" y="100" fill="#8E9BA8" font-family="monospace" font-size="14">DOG-LEGGED STAIRCASE DETAIL - FLIGHT 1</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #13</span>
+                <h4>Dog-Legged Staircase - Waist Slab Detailing</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Tread/Riser detailed section -->
+                <path d="M 150 400 L 150 250 L 300 250 L 300 100 L 450 100 L 450 50" fill="none" stroke="#8E9BA8" stroke-width="3"/>
+                <!-- Rebar hook in step -->
+                <path d="M 120 280 L 280 280 L 280 130 L 430 130" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <circle cx="200" cy="280" r="6" fill="#2c537d"/>
+                <circle cx="350" cy="130" r="6" fill="#2c537d"/>
+                <!-- Dim lines -->
+                <text x="210" y="235" fill="#FFFFFF" font-family="monospace" font-size="12">RISER = 150mm</text>
+                <text x="180" y="325" fill="#FFFFFF" font-family="monospace" font-size="12">TREAD = 270mm</text>
+                <text x="310" y="180" fill="#C75D2C" font-family="monospace" font-size="12">ANCHOR BARS T10</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #14</span>
+                <h4>Staircase Steps - Tread & Riser Detail</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Staircase connection to foundation beam -->
+                <rect x="50" y="300" width="300" height="150" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <path d="M 300 300 L 550 100 L 700 100" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Rebar going deep into beam -->
+                <path d="M 680 120 L 530 120 L 250 340 L 250 420 L 100 420" fill="none" stroke="#C75D2C" stroke-width="3"/>
+                <text x="350" y="240" fill="#FFFFFF" font-family="monospace" font-size="12">FOUNDATION BEAM FB1 CONNECTION</text>
+                <text x="80" y="80" fill="#8E9BA8" font-family="monospace" font-size="14">STAIRCASE BASE ANCHORAGE PROFILE</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #15</span>
+                <h4>Staircase Connection - Plinth Beam Anchorage</h4>
+              </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox(this)">
+              <svg class="portfolio-item-img" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#1a2b3c"/>
+                <!-- Open well staircase layout top view -->
+                <rect x="150" y="100" width="500" height="300" fill="none" stroke="#8E9BA8" stroke-width="2"/>
+                <!-- Flight lines -->
+                <rect x="150" y="100" width="180" height="300" fill="none" stroke="#8E9BA8" stroke-dasharray="5,5"/>
+                <rect x="470" y="100" width="180" height="300" fill="none" stroke="#8E9BA8" stroke-dasharray="5,5"/>
+                <!-- Text -->
+                <text x="200" y="250" fill="#FFFFFF" font-family="monospace" font-size="12">FLIGHT 1 (UP)</text>
+                <text x="520" y="250" fill="#FFFFFF" font-family="monospace" font-size="12">FLIGHT 2 (DN)</text>
+                <text x="360" y="150" fill="#C75D2C" font-family="monospace" font-size="12">WELL ZONE</text>
+                <text x="270" y="70" fill="#FFFFFF" font-family="monospace" font-size="14">OPEN WELL STAIRCASE GENERAL PLAN</text>
+                <text x="600" y="440" fill="#C75D2C" font-family="monospace" font-size="12">REBARATOZ CAD</text>
+              </svg>
+              <div class="portfolio-item-overlay">
+                <span>Drawing #16</span>
+                <h4>Open Well Staircase - General Layout Plan</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Lightbox Container -->
+  <div class="lightbox" id="portfolio-lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div id="lightbox-media-container"></div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Section 5: Pricing Section -->
+  <section class="section section-dark" id="pricing">
+    <div class="container">
+      <div class="section-header reveal-item">
+        <span class="badge">Pricing Plans</span>
+        <h2>Choose Your Automation Tier</h2>
+        <p>Simple, transparent pricing. Pay securely with UPI and generate CAD drawings in minutes.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Tier -->
+        <div class="pricing-card reveal-item">
+          <div class="pricing-header">
+            <h3>Starter</h3>
+            <p>Perfect for individual structural engineers and freelance consultants.</p>
+            <div class="pricing-price">₹999 <span>/ Month</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li>DXF Upload</li>
+            <li>Slab Reinforcement Drawings</li>
+            <li>Beam Reinforcement Drawings</li>
+            <li>Column Reinforcement Drawings</li>
+            <li>Staircase Reinforcement Drawings</li>
+            <li>Editable CAD Output</li>
+            <li>Basic Support</li>
+            <li>10 Projects / Month</li>
+          </ul>
+          <button class="btn btn-outline" onclick="openCheckout('Starter', 999)">Get Started</button>
+        </div>
+
+        <!-- Professional Tier (Most Popular) -->
+        <div class="pricing-card popular reveal-item reveal-delay-1">
+          <div class="popular-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            Most Popular
+          </div>
+          <div class="pricing-header">
+            <h3>Professional</h3>
+            <p>Designed for active engineering consultancies and design firms.</p>
+            <div class="pricing-price">₹2,999 <span>/ Month</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><strong>All Starter Features</strong></li>
+            <li><strong>Unlimited Projects</strong></li>
+            <li>Priority Support</li>
+            <li>Faster Processing</li>
+            <li>Advanced Project Management</li>
+            <li>Early Access to New Features</li>
+          </ul>
+          <button class="btn btn-primary" onclick="openCheckout('Professional', 2999)">Get Started</button>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="pricing-card reveal-item reveal-delay-2">
+          <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <p>Tailored workflows and integrations for builders and corporate studios.</p>
+            <div class="pricing-price">Custom <span>Pricing</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><strong>All Professional Features</strong></li>
+            <li>Multi-User Access</li>
+            <li>Custom Workflows</li>
+            <li>Dedicated Support</li>
+            <li>Custom Integration</li>
+            <li>Team Management</li>
+            <li>Enterprise Deployment</li>
+          </ul>
+          <button class="btn btn-outline" onclick="contactSales()">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Contact Us Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-item">
+          <div>
+            <span class="badge">Get in Touch</span>
+            <h2>Have Questions? Contact Our Support Team</h2>
+            <p>Fill out the form to contact us regarding custom solutions, payment questions, or features help. We usually respond within 24 hours.</p>
+          </div>
+          
+          <div class="contact-details">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <h4>Email Us</h4>
+                <p><a href="mailto:info@rebaratoz.com">info@rebaratoz.com</a></p>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <h4>Call Us</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            REBARATOZ is developed and managed by structural engineering consultants who understand reinforcement codes.
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-item reveal-delay-2">
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Ar. Rajesh Kumar" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. rajesh@engineers.com" required>
+              </div>
+              <div class="form-group">
+                <label for="form-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="form-phone" class="form-input" placeholder="e.g. 9876543210" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" class="form-input" placeholder="How can we help with your structural project?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="REBARATOZ Logo" class="footer-logo-img">
+          <p>
+            REBARATOZ specializes in reinforcement detailing automation. Deliver error-free structural designs to the construction site in minutes.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#features" class="footer-link">About Us</a></li>
+            <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+            <li><a href="#pricing" class="footer-link">Pricing</a></li>
+            <li><a href="#contact" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Office Details</h4>
+          <p><strong>Address:</strong> Structural Automation Hub, MG Road, Bangalore, India</p>
+          <p><strong>Support Email:</strong> <a href="mailto:support@rebaratoz.com" style="color: var(--color-white)">support@rebaratoz.com</a></p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 REBARATOZ. All rights reserved. Structural Reinforcement Solutions.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- UPI Checkout Modal -->
+  <div class="checkout-modal" id="checkout-modal" onclick="closeCheckout()">
+    <div class="checkout-box" onclick="event.stopPropagation()">
+      
+      <!-- Checkout Header -->
+      <div class="checkout-header">
+        <h3>Secure Checkout</h3>
+        <button class="checkout-close" onclick="closeCheckout()">&times;</button>
+      </div>
+
+      <!-- Checkout Body -->
+      <div class="checkout-body">
+        
+        <!-- Standard Interactive Gateway View -->
+        <div id="checkout-gateway-view" class="active">
+          <div class="checkout-plan-summary">
+            <div class="checkout-plan-info">
+              <h4 id="checkout-summary-name">Professional Plan</h4>
+              <p>Reinforcement Detailing SaaS Subscription</p>
+            </div>
+            <div class="checkout-plan-price" id="checkout-summary-price">₹2,999</div>
+          </div>
+
+          <!-- Checkout Tabs -->
+          <div class="payment-tabs">
+            <button class="payment-tab-btn active" id="tab-qr-btn" onclick="switchPaymentTab('qr')">
+              <svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm8-12v8h8V3h-8zm6 6h-4V5h4v4zm0 10h2v2h-2zm-6-6h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm2 2h2v2h-2zm2-2h2v2h-2zm0-4h2v2h-2zm2 2h2v2h-2z"/></svg>
+              UPI QR Code
+            </button>
+            <button class="payment-tab-btn" id="tab-vpa-btn" onclick="switchPaymentTab('vpa')">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm1 14h-2v-6h2v6zm0-8h-2V7h2v1z"/></svg>
+              UPI ID / VPA
+            </button>
+          </div>
+
+          <!-- Tab Content 1: QR Code -->
+          <div class="payment-content-panel active" id="panel-qr">
+            <div class="qr-container">
+              <div class="qr-box">
+                <div class="qr-placeholder-spinner" id="qr-spinner"></div>
+                <img src="" alt="UPI Payment QR Code" class="qr-img" id="upi-qr-image" style="display: none;" onload="document.getElementById('qr-spinner').style.display='none'; this.style.display='block';">
+              </div>
+              <p class="qr-instruction">Scan the QR code with any UPI app (Google Pay, PhonePe, Paytm, BHIM) to complete your payment.</p>
+              
+              <div class="payment-timer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.79L11 12.5V7h1.5v4.78l3.75 2.25-.76 1.26z"/></svg>
+                QR Code expires in: <span id="checkout-timer-display">05:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 2: UPI ID -->
+          <div class="payment-content-panel" id="panel-vpa">
+            <div class="vpa-container">
+              <label for="checkout-vpa-input" class="form-label">Enter UPI ID / VPA</label>
+              <div class="vpa-input-group">
+                <input type="text" id="checkout-vpa-input" class="form-input" placeholder="e.g. rebaratoz@okaxis" style="margin-bottom: 0;">
+                <button class="btn btn-primary" onclick="submitVPA()" style="padding: 0.75rem 1.5rem;">Verify & Pay</button>
+              </div>
+              <p class="checkout-vpa-note">A request will be sent to your UPI app. Open it to approve the transaction.</p>
+            </div>
+          </div>
+
+          <!-- Status / Splicing loading overlay -->
+          <div class="payment-status-block" id="payment-status-block" style="display: none;">
+            <div class="status-indicator">
+              <div class="status-spinner"></div>
+              <span id="payment-status-text">Awaiting payment verification...</span>
+            </div>
+          </div>
+
+          <!-- Simulator Control Panel for B2B Demonstration -->
+          <div class="simulator-panel">
+            <h5>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              Payment Gateway Simulator Mode
+            </h5>
+            <p>This panel simulates responses from a UPI payment gateway (like Razorpay/Cashfree Webhooks). Click below to trigger test states.</p>
+            <div class="simulator-actions">
+              <button class="btn-sim-success" onclick="simulatePaymentSuccess()">Simulate Success</button>
+              <button class="btn-sim-fail" onclick="simulatePaymentFailure()">Simulate Failure</button>
+            </div>
+          </div>
+
+          <!-- UPI apps logo strip -->
+          <div class="upi-apps-row">
+            <div class="upi-app-icon">
+              <img src="https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?auto=format&fit=crop&w=48&q=80" alt="GPay Logo" style="filter: grayscale(0.2)">
+              Google Pay
+            </div>
+            <div class="upi-app-icon">
+              <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=48&q=80" alt="PhonePe Logo" style="filter: grayscale(0.2)">
+              PhonePe
+            </div>
+            <div class="upi-app-icon">
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=48&q=80" alt="Paytm Logo" style="filter: grayscale(0.2)">
+              Paytm
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Screen View (hidden by default) -->
+        <div id="checkout-success-view" class="checkout-success-view">
+          <div class="success-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+            </svg>
+          </div>
+          <h3>Payment Successful!</h3>
+          <p>Thank you for subscribing to REBARATOZ. Your account is active, and you can now start generating unlimited CAD detailing projects.</p>
+          
+          <div class="receipt-box">
+            <div class="receipt-line">
+              <span class="receipt-label">Subscription Tier:</span>
+              <span class="receipt-value" id="receipt-plan-name">Professional Plan</span>
+            </div>
+            <div class="receipt-line">
+              <span class="receipt-label">Amount Paid:</span>
+              <span class="receipt-value" id="receipt-amount">₹2,999</span>
+            </div>
+            <div class="receipt-line">
+              <span class="receipt-label">Transaction Reference:</span>
+              <span class="receipt-value" id="receipt-tx-ref">TXN984572915830</span>
+            </div>
+            <div class="receipt-line">
+              <span class="receipt-label">Status:</span>
+              <span class="receipt-value" style="color: #28a745;">COMPLETED</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="closeCheckout(true)">Go to Dashboard</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
