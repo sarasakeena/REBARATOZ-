@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="REBARATOZ automates RCC reinforcement detailing (drafting) for structural engineers, generating slab, beam, column, and staircase layouts in CAD.">
   <title>REBARATOZ - Structural Reinforcement Detailing Automation</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -60,87 +60,171 @@
       <div class="section-header reveal-item">
         <span class="badge">Features</span>
         <h2>What REBARATOZ Does</h2>
-        <p>A comprehensive RCC detailing automation engine tailored for structural design consultants and draftsmen.</p>
+        <p>A comprehensive RCC detailing automation engine — see exactly what goes in and what comes out for each element type.</p>
       </div>
 
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-card reveal-item reveal-delay-1">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h8v2H8v-2z"/>
-            </svg>
+      <div class="features-showcase">
+
+        <!-- Feature Row 1: Slab Reinforcement -->
+        <div class="feature-row reveal-item">
+          <div class="feature-label-col">
+            <span class="feat-number">01</span>
+            <h3>Slab Reinforcement</h3>
+            <span class="feat-badge">RCC Slab</span>
           </div>
-          <h3>Slab Reinforcement</h3>
-          <p>Generates detailed top and bottom bar layouts, crank details, and distribution steel for one-way and two-way slabs, conforming to building code requirements.</p>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header input-header">
+              <svg viewBox="0 0 24 24"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+              Input Parameters
+            </div>
+            <div class="feature-visual-body">
+              <p>Slab span, thickness, support condition (simply supported / continuous), steel grade &amp; bar spacing from design report</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-input">Span × Width</span>
+                <span class="feat-tag tag-input">Slab Thickness</span>
+                <span class="feat-tag tag-input">Top &amp; Bottom Bars</span>
+                <span class="feat-tag tag-input">Crank %</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header output-header">
+              <svg viewBox="0 0 24 24"><path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+              Output Drawing
+            </div>
+            <div class="feature-visual-body">
+              <p>Full plan layout with top &amp; bottom rebar grid, crank bar elevation detail, distribution steel, dimensions, and bar schedule table — in editable DXF</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-output">T12 @ 150 c/c TOP</span>
+                <span class="feat-tag tag-output">T10 @ 200 c/c BTM</span>
+                <span class="feat-tag tag-green">DXF Ready</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-card reveal-item reveal-delay-2">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M2 9h20v6H2V9zm2 2v2h16v-2H4z"/>
-            </svg>
+        <!-- Feature Row 2: Beam Reinforcement -->
+        <div class="feature-row reveal-item reveal-delay-1">
+          <div class="feature-label-col">
+            <span class="feat-number">02</span>
+            <h3>Beam Reinforcement</h3>
+            <span class="feat-badge">RCC Beam</span>
           </div>
-          <h3>Beam Reinforcement</h3>
-          <p>Creates complete longitudinal elevations and cross-sections of beams, detailing continuous support rebars, stirrups spacing zones, and curtailment zones.</p>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header input-header">
+              <svg viewBox="0 0 24 24"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+              Input Parameters
+            </div>
+            <div class="feature-visual-body">
+              <p>Beam span, width &amp; depth, top &amp; bottom longitudinal bars, stirrup diameter &amp; zone spacing from design output</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-input">Beam Span</span>
+                <span class="feat-tag tag-input">b × D</span>
+                <span class="feat-tag tag-input">Top / Btm Bars</span>
+                <span class="feat-tag tag-input">Stirrup Zones</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header output-header">
+              <svg viewBox="0 0 24 24"><path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+              Output Drawing
+            </div>
+            <div class="feature-visual-body">
+              <p>Longitudinal elevation with curtailment zones, cross-section detailing at support &amp; midspan, stirrup density map — all dimensioned</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-output">3T20 TOP CONT.</span>
+                <span class="feat-tag tag-output">T8 @ 100/200 c/c</span>
+                <span class="feat-tag tag-green">DXF Ready</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="feature-card reveal-item reveal-delay-3">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M8 2h8v20H8V2zm2 2v14h4V4h-4zm0 16h4v2h-4v-2z"/>
-            </svg>
+        <!-- Feature Row 3: Column Reinforcement -->
+        <div class="feature-row reveal-item reveal-delay-2">
+          <div class="feature-label-col">
+            <span class="feat-number">03</span>
+            <h3>Column Reinforcement</h3>
+            <span class="feat-badge">RCC Column</span>
           </div>
-          <h3>Column Reinforcement</h3>
-          <p>Details column vertical reinforcement main bars and lateral ties, managing lap splice zones, column dimensions, and coordinate-grid alignments automatically.</p>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header input-header">
+              <svg viewBox="0 0 24 24"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+              Input Parameters
+            </div>
+            <div class="feature-visual-body">
+              <p>Column size, floor height, main bar count &amp; diameter, lateral tie diameter &amp; pitch, lap splice zone from design schedule</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-input">Col. Size</span>
+                <span class="feat-tag tag-input">Floor Height</span>
+                <span class="feat-tag tag-input">Main Bars</span>
+                <span class="feat-tag tag-input">Ties Pitch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header output-header">
+              <svg viewBox="0 0 24 24"><path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+              Output Drawing
+            </div>
+            <div class="feature-visual-body">
+              <p>Plan section showing bar arrangement &amp; tie pattern, elevation with lap splice zone, floor levels &amp; coordinate grid placement</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-output">8T20 + T8@150</span>
+                <span class="feat-tag tag-output">Lap Zone 50d</span>
+                <span class="feat-tag tag-green">DXF Ready</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 4 -->
-        <div class="feature-card reveal-item">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4H7v2h8c1.1 0 2-.9 2-2v-4zm0-2V9c0-1.1-.9-2-2-2h-4v4h6z"/>
-            </svg>
+        <!-- Feature Row 4: Staircase Reinforcement -->
+        <div class="feature-row reveal-item reveal-delay-3">
+          <div class="feature-label-col">
+            <span class="feat-number">04</span>
+            <h3>Staircase Reinforcement</h3>
+            <span class="feat-badge">RCC Stair</span>
           </div>
-          <h3>Staircase Reinforcement</h3>
-          <p>Draws flight profiles of dog-legged and open-well staircases, complete with flight waist slab detailing, landing bars, and proper anchorage lengths.</p>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header input-header">
+              <svg viewBox="0 0 24 24"><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+              Input Parameters
+            </div>
+            <div class="feature-visual-body">
+              <p>Riser height, tread width, number of steps, waist slab thickness, main bar &amp; distribution bar specs, stair type (dog-leg / open-well)</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-input">Riser × Tread</span>
+                <span class="feat-tag tag-input">Waist Thickness</span>
+                <span class="feat-tag tag-input">Stair Type</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-visual-col">
+            <div class="feature-visual-header output-header">
+              <svg viewBox="0 0 24 24"><path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+              Output Drawing
+            </div>
+            <div class="feature-visual-body">
+              <p>Flight profile with waist slab detailing, landing bars, anchorage lengths at supports, tread/riser dim lines &amp; bar mark schedule</p>
+              <div class="feat-tag-row">
+                <span class="feat-tag tag-output">T12 @ 120 MAIN</span>
+                <span class="feat-tag tag-output">T8 DIST. BARS</span>
+                <span class="feat-tag tag-green">DXF Ready</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature 5 -->
-        <div class="feature-card reveal-item reveal-delay-1">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-            </svg>
-          </div>
-          <h3>Editable CAD Output</h3>
-          <p>Export drawings directly to standard DXF format, readable and fully editable in AutoCAD, BricsCAD, ZWCAD, or other industry CAD drafting platforms.</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="feature-card reveal-item reveal-delay-2">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
-            </svg>
-          </div>
-          <h3>Reduces Repetitive Work</h3>
-          <p>Eliminate the tedious task of drawing hundreds of reinforcement lines, stirrups zones, and drawing dimensions manually from scratch.</p>
-        </div>
-
-        <!-- Feature 7 -->
-        <div class="feature-card reveal-item reveal-delay-3">
-          <div class="feature-icon-wrapper">
-            <svg class="feature-icon" viewBox="0 0 24 24">
-              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.79L11 12.5V7h1.5v4.78l3.75 2.25-.76 1.26z"/>
-            </svg>
-          </div>
-          <h3>Improves Productivity</h3>
-          <p>Turn weeks of manual drafting cycles into minutes of structured checking. Deliver project drawings faster to clients and boost engineering throughput.</p>
-        </div>
-      </div>
+      </div><!-- /features-showcase -->
     </div>
   </section>
 
