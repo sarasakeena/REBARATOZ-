@@ -23,10 +23,10 @@
   --color-black: #06101B;
   
   /* Text Colors — high contrast */
-  --color-text-main: #0E1C2B;      /* Near Black Navy */
-  --color-text-body: #384552;      /* Rich Dark Grey */
-  --color-text-muted: #5C6B7A;     /* Medium Slate */
-  --color-text-light: #8A9BAB;     /* Light Slate */
+  --color-text-main: #000000;      /* Black */
+  --color-text-body: #000000;      /* Black */
+  --color-text-muted: #000000;     /* Black */
+  --color-text-light: #000000;     /* Black */
   
   /* UI Elements */
   --color-border: rgba(14, 42, 71, 0.09);
@@ -68,7 +68,7 @@ body {
 /* Typography elements */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
-  color: var(--color-primary);
+  color: #000000;
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -144,10 +144,7 @@ img {
 }
 
 .section-header h2 {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 .section-header p {
@@ -207,13 +204,13 @@ img {
 }
 
 .btn-outline {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: #000000;
+  color: #000000;
   background-color: transparent;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-primary);
+  background-color: #000000;
   color: var(--color-white);
   transform: translateY(-2px);
 }
@@ -285,7 +282,7 @@ img {
 }
 
 .header.scrolled .nav-link {
-  color: var(--color-primary);
+  color: #000000;
   text-shadow: none;
 }
 
@@ -325,13 +322,13 @@ img {
 }
 
 .header.scrolled .btn-outline {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: #000000;
+  color: #000000;
   background-color: transparent;
 }
 
 .header.scrolled .btn-outline:hover {
-  background-color: var(--color-primary);
+  background-color: #000000;
   color: var(--color-white);
 }
 
@@ -521,12 +518,12 @@ img {
 
 .feature-visual-header.input-header {
   background-color: #EBF2F8;
-  color: var(--color-primary);
+  color: #000000;
 }
 
 .feature-visual-header.output-header {
   background-color: #FEF0E8;
-  color: var(--color-accent);
+  color: #000000;
 }
 
 .feature-visual-header svg {
