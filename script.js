@@ -199,47 +199,45 @@ let checkoutTimerInterval = null;
 let currentSelectedPlan = '';
 let currentSelectedPrice = 0;
 
-function openCheckout(planName, price) {
-  currentSelectedPlan = planName;
-  currentSelectedPrice = price;
+async function openCheckout(planName, price) {
+  // Init Supabase to get the current logged-in user
+  const sb = window.supabase.createClient(
+    'https://ybznmjbgzpmfgnhcnnel.supabase.co',
+    'sb_publishable_CqaArlkHmt7hkAnZOqEXgw_U71saQ4r'
+  );
 
-  const modal = document.getElementById('checkout-modal');
-  const planSummaryName = document.getElementById('checkout-summary-name');
-  const planSummaryPrice = document.getElementById('checkout-summary-price');
-  
-  planSummaryName.innerText = `${planName} Plan`;
-  planSummaryPrice.innerText = `₹${price.toLocaleString('en-IN')}`;
+  const { data: { session } } = await sb.auth.getSession();
 
-  // Reset modal screens to standard billing view
-  document.getElementById('checkout-gateway-view').style.display = 'block';
-  document.getElementById('checkout-success-view').classList.remove('active');
-  document.getElementById('payment-status-block').style.display = 'none';
-  document.getElementById('checkout-vpa-input').value = '';
+  if (!session) {
+    // User not logged in — send them to auth page first
+    window.location.href = 'auth.html';
+    return;
+  }
 
-  // Generate UPI QR Code URL via QR Server API
-  // Merchant VPA: rebaratoz@upi (will resolve to a generic merchant in India, testing layout only)
-  const merchantVpa = 'rebaratoz@okaxis';
-  const merchantName = 'REBARATOZ';
-  const txRef = 'TXN' + Math.floor(Math.random() * 900000000000 + 100000000000);
-  const upiPayload = `upi://pay?pa=${merchantVpa}&pn=${encodeURIComponent(merchantName)}&am=${price}.00&cu=INR&tn=${encodeURIComponent(planName + ' Detailing Subscription')}&tr=${txRef}`;
-  
-  // Set image source
-  const upiQrImage = document.getElementById('upi-qr-image');
-  const qrSpinner = document.getElementById('qr-spinner');
-  
-  qrSpinner.style.display = 'block';
-  upiQrImage.style.display = 'none';
-  upiQrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiPayload)}`;
+  const userId    = session.user.id;
+  const userEmail = session.user.email;
+  const userName  = session.user.user_metadata?.full_name || '';
 
-  // Default to QR payment tab display
-  switchPaymentTab('qr');
+  // Base Razorpay hosted payment links per plan
+  const baseLinks = {
+    'Starter':      'https://rzp.io/rzp/YHcV6zeL',
+    'Professional': 'https://rzp.io/rzp/YHcV6zeL'
+  };
 
-  // Start 5 minute countdown timer
-  startCheckoutTimer(300);
+  const base = baseLinks[planName];
+  if (!base) {
+    console.error('No payment link configured for plan:', planName);
+    return;
+  }
 
-  // Display modal
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  // Append user identity as URL params so Razorpay passes them back in the webhook notes
+  const redirectUrl = base
+    + '?prefill[email]='  + encodeURIComponent(userEmail)
+    + '&prefill[name]='   + encodeURIComponent(userName)
+    + '&notes[user_id]='  + encodeURIComponent(userId)
+    + '&notes[plan]='     + encodeURIComponent(planName);
+
+  window.location.href = redirectUrl;
 }
 
 function closeCheckout(reloadDashboard = false) {

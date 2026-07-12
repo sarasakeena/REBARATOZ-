@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in or create an account to access REBARATOZ — the automated structural reinforcement detailing platform for engineers.">
+  <title>REBARATOZ — Login / Sign Up</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+  <!-- Full-viewport Auth Page -->
+  <div class="auth-page" id="auth-page">
+
+    <!-- Floating particles for visual depth -->
+    <div class="auth-bg-particles">
+      <span class="auth-particle auth-particle-1"></span>
+      <span class="auth-particle auth-particle-2"></span>
+      <span class="auth-particle auth-particle-3"></span>
+      <span class="auth-particle auth-particle-4"></span>
+      <span class="auth-particle auth-particle-5"></span>
+    </div>
+
+    <!-- Auth Card -->
+    <div class="auth-card" id="auth-card">
+
+      <!-- Logo -->
+      <a href="index.html" class="auth-logo-link" title="Return to REBARATOZ Home">
+        <img src="assets/logo.png" alt="REBARATOZ Logo" class="auth-logo" id="auth-logo">
+      </a>
+
+      <!-- Tagline -->
+      <p class="auth-tagline">Structural Reinforcement Detailing Automation</p>
+
+      <!-- Toggle between Login / Signup -->
+      <div class="auth-toggle" id="auth-toggle">
+        <button class="auth-toggle-btn active" id="toggle-login" type="button">Log In</button>
+        <button class="auth-toggle-btn" id="toggle-signup" type="button">Sign Up</button>
+        <span class="auth-toggle-indicator" id="auth-toggle-indicator"></span>
+      </div>
+
+      <!-- Auth Form -->
+      <form id="auth-form" autocomplete="on" novalidate>
+
+        <!-- Full Name (Signup only) -->
+        <div class="auth-field auth-field-name" id="field-name" style="display: none;">
+          <label for="auth-name" class="form-label">Full Name</label>
+          <div class="auth-input-wrapper">
+            <svg class="auth-input-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <input type="text" id="auth-name" class="form-input auth-input" placeholder="e.g. Rajesh Kumar" autocomplete="name">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="auth-field">
+          <label for="auth-email" class="form-label">Email Address</label>
+          <div class="auth-input-wrapper">
+            <svg class="auth-input-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <input type="email" id="auth-email" class="form-input auth-input" placeholder="you@company.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="auth-field">
+          <label for="auth-password" class="form-label">Password</label>
+          <div class="auth-input-wrapper">
+            <svg class="auth-input-icon" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            <input type="password" id="auth-password" class="form-input auth-input" placeholder="Min. 6 characters" required autocomplete="current-password" minlength="6">
+            <button type="button" class="auth-password-toggle" id="password-toggle" aria-label="Toggle password visibility" tabindex="-1">
+              <svg class="eye-open" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              <svg class="eye-closed" style="display:none;" viewBox="0 0 24 24"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="auth-message auth-error" id="auth-error" style="display: none;">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <span id="auth-error-text"></span>
+        </div>
+
+        <!-- Success Message -->
+        <div class="auth-message auth-success" id="auth-success" style="display: none;">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span id="auth-success-text"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary auth-submit-btn" id="auth-submit-btn">
+          <span class="auth-btn-text" id="auth-btn-text">Log In</span>
+          <span class="auth-btn-spinner" id="auth-btn-spinner" style="display: none;"></span>
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="auth-divider">
+        <span>or</span>
+      </div>
+
+      <!-- Google Login Button -->
+      <button type="button" class="btn btn-outline auth-google-btn" id="google-login-btn">
+        <svg viewBox="0 0 24 24" class="google-icon" width="18" height="18" style="margin-right: 8px;">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          <path d="M1 1h22v22H1z" fill="none"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <!-- Back to landing -->
+      <a href="index.html" class="auth-back-link" id="auth-back-link">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Back to REBARATOZ Home
+      </a>
+
+    </div><!-- /auth-card -->
+
+    <!-- Footer credit -->
+    <p class="auth-footer">&copy; 2026 REBARATOZ. Structural Reinforcement Solutions.</p>
+
+  </div><!-- /auth-page -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Init our own client as `sb` to avoid conflict with the CDN's window.supabase global
+    const sb = window.supabase.createClient(
+      'https://ybznmjbgzpmfgnhcnnel.supabase.co',
+      'sb_publishable_CqaArlkHmt7hkAnZOqEXgw_U71saQ4r'
+    );
+
+    // ─── DOM References ──────────────────────────────────────────────
+    const authForm       = document.getElementById('auth-form');
+    const toggleLogin    = document.getElementById('toggle-login');
+    const toggleSignup   = document.getElementById('toggle-signup');
+    const indicator      = document.getElementById('auth-toggle-indicator');
+    const fieldName      = document.getElementById('field-name');
+    const inputName      = document.getElementById('auth-name');
+    const inputEmail     = document.getElementById('auth-email');
+    const inputPassword  = document.getElementById('auth-password');
+    const errorBox       = document.getElementById('auth-error');
+    const errorText      = document.getElementById('auth-error-text');
+    const successBox     = document.getElementById('auth-success');
+    const successText    = document.getElementById('auth-success-text');
+    const submitBtn      = document.getElementById('auth-submit-btn');
+    const btnText        = document.getElementById('auth-btn-text');
+    const btnSpinner     = document.getElementById('auth-btn-spinner');
+    const passwordToggle = document.getElementById('password-toggle');
+    const authCard       = document.getElementById('auth-card');
+
+    let isLoginMode = true;
+
+    // ─── Auto-redirect if already logged in ──────────────────────────
+    (async () => {
+      try {
+        const { data: { session } } = await sb.auth.getSession();
+        if (session) {
+          window.location.href = 'dashboard.html';
+        } else {
+          authCard.classList.add('auth-card-visible');
+        }
+      } catch (err) {
+        console.error('Session check error:', err);
+        authCard.classList.add('auth-card-visible');
+      }
+    })();
+
+    // ─── Toggle Login ↔ Signup ───────────────────────────────────────
+    function setMode(mode) {
+      isLoginMode = mode === 'login';
+      hideMessages();
+      if (isLoginMode) {
+        toggleLogin.classList.add('active');
+        toggleSignup.classList.remove('active');
+        indicator.style.transform = 'translateX(0)';
+        fieldName.style.display = 'none';
+        inputName.removeAttribute('required');
+        btnText.textContent = 'Log In';
+        inputPassword.setAttribute('autocomplete', 'current-password');
+      } else {
+        toggleLogin.classList.remove('active');
+        toggleSignup.classList.add('active');
+        indicator.style.transform = 'translateX(100%)';
+        fieldName.style.display = 'block';
+        inputName.setAttribute('required', '');
+        btnText.textContent = 'Create Account';
+        inputPassword.setAttribute('autocomplete', 'new-password');
+      }
+    }
+
+    toggleLogin.addEventListener('click', () => setMode('login'));
+    toggleSignup.addEventListener('click', () => setMode('signup'));
+
+    // ─── Password Visibility Toggle ──────────────────────────────────
+    passwordToggle.addEventListener('click', () => {
+      const isPass = inputPassword.type === 'password';
+      inputPassword.type = isPass ? 'text' : 'password';
+      passwordToggle.querySelector('.eye-open').style.display  = isPass ? 'none'  : 'block';
+      passwordToggle.querySelector('.eye-closed').style.display = isPass ? 'block' : 'none';
+    });
+
+    // ─── Message Helpers ─────────────────────────────────────────────
+    function showError(msg) {
+      errorText.textContent = msg;
+      errorBox.style.display = 'flex';
+      successBox.style.display = 'none';
+      errorBox.classList.remove('auth-shake');
+      void errorBox.offsetWidth;
+      errorBox.classList.add('auth-shake');
+    }
+
+    function showSuccess(msg) {
+      successText.textContent = msg;
+      successBox.style.display = 'flex';
+      errorBox.style.display = 'none';
+    }
+
+    function hideMessages() {
+      errorBox.style.display = 'none';
+      successBox.style.display = 'none';
+    }
+
+    function setLoading(loading) {
+      submitBtn.disabled = loading;
+      btnText.style.display   = loading ? 'none'         : 'inline';
+      btnSpinner.style.display = loading ? 'inline-block' : 'none';
+    }
+
+    // ─── Form Submission ─────────────────────────────────────────────
+    authForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideMessages();
+
+      const email    = inputEmail.value.trim();
+      const password = inputPassword.value;
+
+      if (!email)                          { showError('Please enter your email address.'); return; }
+      if (!password || password.length < 6){ showError('Password must be at least 6 characters.'); return; }
+
+      setLoading(true);
+
+      try {
+        if (isLoginMode) {
+          // LOGIN
+          const { error } = await sb.auth.signInWithPassword({ email, password });
+          if (error) {
+            showError(mapAuthError(error.message));
+          } else {
+            showSuccess('Login successful! Redirecting…');
+            setTimeout(() => { window.location.href = 'dashboard.html'; }, 800);
+          }
+        } else {
+          // SIGNUP
+          const fullName = inputName.value.trim();
+          if (!fullName) { showError('Please enter your full name.'); setLoading(false); return; }
+
+          const { error } = await sb.auth.signUp({
+            email,
+            password,
+            options: { data: { full_name: fullName } }
+          });
+
+          if (error) {
+            showError(mapAuthError(error.message));
+          } else {
+            showSuccess('Account created! Please check your email inbox to confirm your address before logging in.');
+            authForm.reset();
+            setTimeout(() => setMode('login'), 4000);
+          }
+        }
+      } catch (err) {
+        showError('An unexpected error occurred. Please try again.');
+        console.error('Auth error:', err);
+      }
+
+      setLoading(false);
+    });
+
+    // ─── Google OAuth Login ──────────────────────────────────────────
+    const googleBtn = document.getElementById('google-login-btn');
+    googleBtn.addEventListener('click', async () => {
+      googleBtn.disabled = true;
+      googleBtn.innerHTML = '<span class="auth-btn-spinner" style="display:inline-block; border-top-color: var(--color-primary); border-color: rgba(0,0,0,0.1);"></span>';
+      
+      try {
+        const { data, error } = await sb.auth.signInWithOAuth({
+          provider: 'google',
+          options: {
+            redirectTo: window.location.origin + '/dashboard.html'
+          }
+        });
+        
+        if (error) {
+          showError(mapAuthError(error.message));
+          googleBtn.disabled = false;
+          googleBtn.innerHTML = 'Continue with Google';
+        }
+      } catch (err) {
+        showError('Failed to initialize Google login.');
+        console.error('Google Auth error:', err);
+        googleBtn.disabled = false;
+        googleBtn.innerHTML = 'Continue with Google';
+      }
+    });
+
+    // ─── Error Message Mapper ────────────────────────────────────────
+    function mapAuthError(msg) {
+      const l = msg.toLowerCase();
+      if (l.includes('invalid login credentials') || l.includes('invalid_credentials'))
+        return 'Invalid email or password. Please double-check and try again.';
+      if (l.includes('email not confirmed'))
+        return 'Your email is not yet confirmed. Please check your inbox for a verification link.';
+      if (l.includes('user already registered') || l.includes('already been registered'))
+        return 'An account with this email already exists. Try logging in instead.';
+      if (l.includes('rate limit') || l.includes('too many requests'))
+        return 'Too many attempts. Please wait a moment and try again.';
+      if (l.includes('password'))
+        return 'Password is too weak. Use at least 6 characters with a mix of letters and numbers.';
+      if (l.includes('email'))
+        return 'Please enter a valid email address.';
+      return msg;
+    }
+  </script>
+
+</body>
+</html>
