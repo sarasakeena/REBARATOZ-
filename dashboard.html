@@ -175,13 +175,18 @@
         const fullName = user.user_metadata?.full_name || email.split('@')[0];
 
         // Check subscription status
-        const { data: subscription } = await sb
+        // Use select without maybeSingle to avoid errors if the user has multiple rows 
+        // (e.g. from clicking Get Started multiple times).
+        const { data: subscriptions } = await sb
           .from('subscriptions')
           .select('status')
-          .eq('user_id', user.id)
-          .maybeSingle();
+          .eq('user_id', user.id);
 
-        const isActive = subscription && subscription.status === 'activated';
+        let isActive = false;
+        if (subscriptions && subscriptions.length > 0) {
+          // If ANY row is activated, treat the user as active.
+          isActive = subscriptions.some(sub => sub.status === 'activated');
+        }
 
         // Update UI
         greetingEl.textContent   = getGreeting();

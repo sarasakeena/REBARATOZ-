@@ -16,7 +16,6 @@
         <!-- Logo file placeholder, will display logo.png directly -->
         <img src="assets/logo.png" alt="REBARATOZ Logo" class="logo-img">
       </a>
-      
       <nav class="nav" id="nav-menu">
         <a href="#home" class="nav-link">Home</a>
         <a href="#features" class="nav-link">About Us</a>
@@ -26,7 +25,7 @@
       </nav>
 
       <div class="nav-actions" id="nav-actions">
-        <a href="auth.html" style="font-weight: 600; font-size: 0.95rem;">Log In</a>
+        <a href="auth.html" class="nav-login-btn">Log In</a>
         <a href="auth.html" class="btn btn-outline">Get Started</a>
       </div>
 
@@ -43,9 +42,9 @@
     <div class="container">
       <div class="hero-content reveal-item revealed">
         <span class="hero-identity">REBARATOZ — Your Digital Reinforcement Draftsman</span>
-        <h1>Automation Solutions for Individual House Construction</h1>
+        <h1>Streamline Structural Design with Precision and Speed</h1>
         <p>
-          REBARATOZ helps structural engineers create reinforcement drawings automatically — generating slab, beam, column, and staircase reinforcement layouts in minutes instead of hours of manual drafting, with fully editable CAD output.
+          DraftWin is a detailing automation software that can create 100 A1-size drawings in just 40 minutes , about one A1 drawing every 2 seconds. It reads design data from ETABS versions 9.7 to 20 and converts it into multiple coordinated drawings for faster, cleaner structural detailing.
         </p>
         <div class="hero-actions">
           <a href="auth.html" class="btn btn-primary">Get Started</a>
@@ -60,7 +59,9 @@
     <div class="container">
       <div class="section-header reveal-item">
         <h2>What REBARATOZ Does</h2>
-        <p>A comprehensive RCC detailing automation engine — see exactly what goes in and what comes out for each element type.</p>
+        <h3>A comprehensive RCC detailing automation engine </h3>
+
+        <p>See exactly what goes in and what comes out for each element type.</p>
       </div>
 
       <div class="features-showcase">
@@ -233,13 +234,15 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-text reveal-item">
-          <h2>Empowering Engineers, Automating Detailing</h2>
+          <h2>DraftWin</h2>
+          <p class="about-tagline">Faster Detailing, Fewer Manual Errors</p>
           <p>
-            At REBARATOZ, we bridge the gap between engineering design analysis and finalized CAD drafting. We understand that detailing concrete structures is time-consuming yet requires precise compliance with safety guidelines.
+            REBARATOZ brings the power of DraftWin to structural engineers by turning repetitive detailing work into a fast, intelligent automation workflow. It can generate large volumes of drawings in a fraction of the time required by conventional drafting.
           </p>
           <p>
-            Our software allows structural consultants to maintain full review control while offloading the manual drawing mechanics to an intelligent automation engine.
+            It can read design data from ETABS versions 9.7 to 20 and create multiple drawings with greater consistency, while helping teams eliminate manual drafting, reduce errors, improve design communication, and achieve greater efficiency and precision.
           </p>
+          <p><strong>Key benefits:</strong> create structural projects in minutes, reduce manual drafting effort, improve clarity, and work beyond traditional limitations with confidence.</p>
           <a href="#contact" class="btn btn-outline">Talk to Our Team</a>
         </div>
         
@@ -274,8 +277,8 @@
   <section class="section" id="portfolio">
     <div class="container">
       <div class="section-header reveal-item">
-        <h2>Auto-Generated CAD Drawings</h2>
-        <p>Explore real-world structural drawing samples generated entirely using the REBARATOZ automation engine.</p>
+        <h2>Auto Generated CAD Drawings</h2>
+        <p>Explore real world structural drawing samples generated entirely using the REBARATOZ automation engine.</p>
       </div>
 
       <!-- Category Filter Tabs -->
@@ -717,32 +720,28 @@
   <section class="section section-dark" id="pricing">
     <div class="container">
       <div class="section-header reveal-item">
-        <h2>Choose Your Automation Tier</h2>
-        <p>Simple, transparent pricing. Pay securely with UPI and generate CAD drawings in minutes.</p>
+        <h2>Choose the Right Drafting Plan</h2>
+        <p>Simple, transparent pricing with flexible access for solo engineers, growing teams, and unlimited usage.</p>
       </div>
 
       <div class="pricing-grid">
-        <!-- Starter Tier -->
+        <!-- Free Tier -->
         <div class="pricing-card reveal-item">
           <div class="pricing-header">
-            <h3>Starter</h3>
-            <p>Perfect for individual structural engineers and freelance consultants.</p>
-            <div class="pricing-price">₹999 <span>/ Month</span></div>
+            <h3>Free</h3>
+            <p>Perfect for trying the software and generating a few detailing outputs.</p>
+            <div class="pricing-price">₹0 <span>/ Month</span></div>
           </div>
           <ul class="pricing-features">
-            <li>DXF Upload</li>
-            <li>Slab Reinforcement Drawings</li>
-            <li>Beam Reinforcement Drawings</li>
-            <li>Column Reinforcement Drawings</li>
-            <li>Staircase Reinforcement Drawings</li>
-            <li>Editable CAD Output</li>
-            <li>Basic Support</li>
-            <li>10 Projects / Month</li>
+            <li>10 Downloads</li>
+            <li>Core slab, beam, column and staircase output</li>
+            <li>Editable CAD output</li>
+            <li>Email support</li>
           </ul>
-          <button class="btn btn-outline" onclick="openCheckout('Starter', 999)">Get Started</button>
+          <button class="btn btn-outline" onclick="openCheckout('Free', 0)">Get Started</button>
         </div>
 
-        <!-- Professional Tier (Most Popular) -->
+        <!-- Starter Tier -->
         <div class="pricing-card popular reveal-item reveal-delay-1">
           <div class="popular-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -751,40 +750,39 @@
             Most Popular
           </div>
           <div class="pricing-header">
-            <h3>Professional</h3>
-            <p>Designed for active engineering consultancies and design firms.</p>
-            <div class="pricing-price">₹2,999 <span>/ Month</span></div>
+            <h3>Starter</h3>
+            <p>Best for frequent users who need regular detailing output and faster access.</p>
+            <div class="pricing-price">₹1,999 <span>/ Month</span></div>
           </div>
           <ul class="pricing-features">
-            <li><strong>All Starter Features</strong></li>
-            <li><strong>Unlimited Projects</strong></li>
-            <li>Priority Support</li>
-            <li>Faster Processing</li>
-            <li>Advanced Project Management</li>
-            <li>Early Access to New Features</li>
+            <li>60 Downloads</li>
+            <li>All core detailing features</li>
+            <li>ETABS-compatible output workflow</li>
+            <li>Priority support</li>
+            <li>Faster processing for active projects</li>
           </ul>
-          <button class="btn btn-primary" onclick="openCheckout('Professional', 2999)">Get Started</button>
+          <button class="btn btn-primary" onclick="openCheckout('Starter', 1999)">Get Started</button>
         </div>
 
-        <!-- Enterprise Tier -->
+        <!-- Pro Tier -->
         <div class="pricing-card reveal-item reveal-delay-2">
           <div class="pricing-header">
-            <h3>Enterprise</h3>
-            <p>Tailored workflows and integrations for builders and corporate studios.</p>
-            <div class="pricing-price">Custom <span>Pricing</span></div>
+            <h3>Pro</h3>
+            <p>Ideal for consultancies and teams that need unlimited detailing capacity.</p>
+            <div class="pricing-price">₹4,999 <span>/ Month</span></div>
           </div>
           <ul class="pricing-features">
-            <li><strong>All Professional Features</strong></li>
-            <li>Multi-User Access</li>
-            <li>Custom Workflows</li>
-            <li>Dedicated Support</li>
-            <li>Custom Integration</li>
-            <li>Team Management</li>
-            <li>Enterprise Deployment</li>
+            <li>Unlimited Downloads</li>
+            <li>Full access to all detailing features</li>
+            <li>Advanced workflow and project support</li>
+            <li>Dedicated assistance for team use</li>
+            <li>Software updates included</li>
           </ul>
           <button class="btn btn-outline" onclick="contactSales()">Contact Sales</button>
         </div>
       </div>
+
+      <p style="margin-top: 2rem; text-align: center; color: #000;">Yearly plans and Unlimited plans include regular software updates and feature enhancements.</p>
     </div>
   </section>
 
@@ -808,7 +806,7 @@
               </div>
               <div class="contact-item-text">
                 <h4>Email Us</h4>
-                <p><a href="mailto:info@rebaratoz.com">info@rebaratoz.com</a></p>
+                <p><a href="mailto:CONTACT@rebaratoz.com">CONTACT@rebaratoz.com</a></p>
               </div>
             </div>
             
@@ -821,7 +819,7 @@
               </div>
               <div class="contact-item-text">
                 <h4>Call Us</h4>
-                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><a href="tel:+919972214977">+91 9972214977</a></p>
               </div>
             </div>
           </div>
@@ -886,9 +884,9 @@
 
         <div class="footer-contact">
           <h4>Office Details</h4>
-          <p><strong>Address:</strong> Structural Automation Hub, MG Road, Bangalore, India</p>
-          <p><strong>Support Email:</strong> <a href="mailto:support@rebaratoz.com" style="color: var(--color-white)">support@rebaratoz.com</a></p>
-          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Address:</strong> REBARATOZ Automation Hub, MOTHILAL MAIN ROAD, MADURAI, TAMILNADU INDIA</p>
+          <p><strong>Support Email:</strong> <a href="mailto:CONTACT@rebaratoz.com" style="color: var(--color-white)">CONTACT@rebaratoz.com</a></p>
+          <p><strong>Phone:</strong> +91 9972214977</p>
         </div>
       </div>
 

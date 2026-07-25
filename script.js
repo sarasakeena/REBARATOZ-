@@ -160,19 +160,41 @@ function handleContactSubmit(event) {
   const submitBtn = document.getElementById('form-submit-btn');
   const name = document.getElementById('form-name').value;
   const email = document.getElementById('form-email').value;
+  const phone = document.getElementById('form-phone').value;
+  const message = document.getElementById('form-message').value;
   
   submitBtn.disabled = true;
   submitBtn.innerText = 'Sending message...';
 
-  // Simulate server communication
-  setTimeout(() => {
+  fetch("https://formsubmit.co/ajax/contact@rebaratoz.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+        _subject: "New Contact Form Submission from " + name
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
     alert(`Thank you, ${name}! Your message has been sent successfully. Our engineering support team will reach out to you at ${email} shortly.`);
     
     // Reset form
     document.getElementById('contact-form').reset();
     submitBtn.disabled = false;
     submitBtn.innerText = 'Send Message';
-  }, 1200);
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Oops! There was a problem submitting your form. Please try again.");
+    submitBtn.disabled = false;
+    submitBtn.innerText = 'Send Message';
+  });
 }
 
 /* ==========================================================================

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Payment successful — Welcome to REBARATOZ. Your subscription is now active.">
+  <title>REBARATOZ — Payment Successful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0d1f35;
+      --navy2:  #1b3a5c;
+      --accent: #c75d2c;
+      --green:  #22c55e;
+      --white:  #ffffff;
+      --muted:  #94a3b8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated background orbs */
+    .bg-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .bg-orb-1 { width: 500px; height: 500px; background: #22c55e; top: -100px; left: -100px; animation-delay: 0s; }
+    .bg-orb-2 { width: 400px; height: 400px; background: var(--navy2); bottom: -80px; right: -80px; animation-delay: 3s; }
+    .bg-orb-3 { width: 300px; height: 300px; background: var(--accent); top: 50%; left: 50%; animation-delay: 1.5s; animation-name: floatCenter; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.05); }
+    }
+    @keyframes floatCenter {
+      0%, 100% { transform: translate(-50%,-50%) scale(1); }
+      50%       { transform: translate(-50%,-52%) scale(1.08); }
+    }
+
+    /* Card */
+    .card {
+      position: relative;
+      z-index: 10;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(24px);
+      border-radius: 28px;
+      padding: 56px 48px;
+      max-width: 520px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+      animation: cardIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: scale(0.8) translateY(30px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Success icon */
+    .icon-wrap {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 0 0 rgba(34,197,94,0.4);
+      animation: pulse 2s ease-in-out 0.8s infinite;
+    }
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      70%  { box-shadow: 0 0 0 20px rgba(34,197,94,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+    }
+    .icon-wrap svg { width: 48px; height: 48px; }
+
+    /* Checkmark draw animation */
+    .check-path {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: drawCheck 0.6s ease 0.5s forwards;
+    }
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3);
+      color: #4ade80;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; animation: blink 1.2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    h1 {
+      font-size: 2rem; font-weight: 800;
+      background: linear-gradient(135deg, #fff 40%, #4ade80);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted); font-size: 1rem; line-height: 1.6; margin-bottom: 32px;
+    }
+
+    /* Plan details pill */
+    .plan-pill {
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px; padding: 16px 20px; margin-bottom: 32px;
+      text-align: left;
+    }
+    .plan-pill-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 2px; }
+    .plan-pill-value { font-size: 1rem; font-weight: 600; color: var(--white); }
+    .plan-pill-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.12); }
+
+    /* Progress bar */
+    .redirect-bar-wrap { margin-bottom: 24px; }
+    .redirect-bar-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+    .redirect-bar-track { height: 4px; background: rgba(255,255,255,0.1); border-radius: 999px; overflow: hidden; }
+    .redirect-bar-fill {
+      height: 100%; background: linear-gradient(90deg, #22c55e, #4ade80);
+      border-radius: 999px; width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* Button */
+    .btn-dashboard {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: var(--white); font-weight: 700; font-size: 0.95rem;
+      padding: 14px 32px; border-radius: 12px; border: none;
+      cursor: pointer; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(34,197,94,0.35);
+    }
+    .btn-dashboard:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(34,197,94,0.5); }
+    .btn-dashboard svg { width: 18px; height: 18px; fill: var(--white); }
+
+    /* Logo */
+    .logo {
+      position: fixed; top: 24px; left: 50%; transform: translateX(-50%);
+      z-index: 100;
+    }
+    .logo img { height: 40px; filter: brightness(0) invert(1); opacity: 0.6; }
+
+    /* Confetti */
+    .confetti-container {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 5; overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute; width: 10px; height: 10px; border-radius: 2px;
+      opacity: 0; animation: confettiFall linear forwards;
+    }
+    @keyframes confettiFall {
+      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <div class="confetti-container" id="confetti-container"></div>
+
+  <div class="logo">
+    <img src="assets/logo.png" alt="REBARATOZ">
+  </div>
+
+  <div class="card" id="success-card">
+
+    <div class="icon-wrap">
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="check-path" d="M14 27 L22 35 L38 19"
+          stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Subscription Active
+    </div>
+
+    <h1>Payment Successful!</h1>
+    <p class="subtitle">
+      Your REBARATOZ subscription is now active. Start generating professional
+      reinforcement detailing drawings right away.
+    </p>
+
+    <div class="plan-pill" id="plan-pill">
+      <div>
+        <div class="plan-pill-label">Plan</div>
+        <div class="plan-pill-value" id="pill-plan">—</div>
+      </div>
+      <div class="plan-pill-divider"></div>
+      <div>
+        <div class="plan-pill-label">Amount Paid</div>
+        <div class="plan-pill-value" id="pill-amount">—</div>
+      </div>
+      <div class="plan-pill-divider"></div>
+      <div>
+        <div class="plan-pill-label">Status</div>
+        <div class="plan-pill-value" style="color:#4ade80;">Active</div>
+      </div>
+    </div>
+
+    <div class="redirect-bar-wrap">
+      <div class="redirect-bar-label">
+        Redirecting to your dashboard in <strong id="countdown">5</strong>s&hellip;
+      </div>
+      <div class="redirect-bar-track">
+        <div class="redirect-bar-fill" id="redirect-bar"></div>
+      </div>
+    </div>
+
+    <a href="staircase-design.html" class="btn-dashboard" id="dash-btn">
+      <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+      Enter Workspace
+    </a>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const sb = window.supabase.createClient(
+      'https://ybznmjbgzpmfgnhcnnel.supabase.co',
+      'sb_publishable_CqaArlkHmt7hkAnZOqEXgw_U71saQ4r'
+    );
+
+    // Read URL params set by the payment handler
+    // Fall back to sessionStorage for the Razorpay-hosted link flow
+    const params   = new URLSearchParams(window.location.search);
+    const planName = params.get('plan')       || sessionStorage.getItem('rzp_plan')   || 'Starter';
+    const amount   = params.get('amount')     || sessionStorage.getItem('rzp_amount') || '999';
+    const payId    = params.get('payment_id') || '';
+
+    // Populate plan pill UI
+    document.getElementById('pill-plan').textContent   = planName + ' Plan';
+    document.getElementById('pill-amount').textContent = '\u20B9' + parseInt(amount).toLocaleString('en-IN');
+
+    // Confetti burst
+    function spawnConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#22c55e','#4ade80','#fbbf24','#60a5fa','#f472b6','#c75d2c','#fff'];
+      for (let i = 0; i < 80; i++) {
+        const el = document.createElement('div');
+        el.className = 'confetti-piece';
+        const size = Math.random() * 10 + 6;
+        el.style.cssText = [
+          'left:'              + (Math.random() * 100) + '%',
+          'top: -20px',
+          'width:'             + size + 'px',
+          'height:'            + size + 'px',
+          'background:'        + colors[Math.floor(Math.random() * colors.length)],
+          'border-radius:'     + (Math.random() > 0.5 ? '50%' : '2px'),
+          'animation-duration:' + (Math.random() * 2 + 2) + 's',
+          'animation-delay:'   + (Math.random() * 1) + 's'
+        ].join(';');
+        container.appendChild(el);
+      }
+      setTimeout(() => { container.innerHTML = ''; }, 4500);
+    }
+    spawnConfetti();
+
+    // Countdown redirect
+    const REDIRECT_SECS = 5;
+    let remaining = REDIRECT_SECS;
+    const bar     = document.getElementById('redirect-bar');
+    const countEl = document.getElementById('countdown');
+
+    const timer = setInterval(() => {
+      remaining--;
+      countEl.textContent = remaining;
+      bar.style.width = ((REDIRECT_SECS - remaining) / REDIRECT_SECS * 100) + '%';
+      if (remaining <= 0) {
+        clearInterval(timer);
+        window.location.href = 'staircase-design.html';
+      }
+    }, 1000);
+
+    // Write subscription to Supabase (upsert — safe to call multiple times)
+    (async () => {
+      try {
+        const { data: { session } } = await sb.auth.getSession();
+        if (!session) {
+          // Not logged in — just let the countdown redirect to dashboard
+          // where they'll be bounced to auth.html
+          return;
+        }
+
+        const userId = session.user.id;
+
+        // Call our Edge Function securely to activate the subscription.
+        // Doing this via the edge function bypasses RLS issues, as the function
+        // uses the Service Role key to securely update the database.
+        const endpoint = window.REBARATOZ_SUBSCRIPTION_ENDPOINT || 'https://ybznmjbgzpmfgnhcnnel.supabase.co/functions/v1/create-razorpay-subscription';
+        
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${session.access_token}`
+          },
+          body: JSON.stringify({
+            action: 'activate',
+            userId: userId,
+            planName: planName,
+            paymentId: payId,
+            amount: parseInt(amount)
+          })
+        });
+
+        if (!response.ok) {
+          const errText = await response.text();
+          console.error('Subscription activation failed on server:', errText);
+        } else {
+          console.log('[REBARATOZ] Subscription activated successfully for user:', userId);
+        }
+      } catch (err) {
+        console.error('Supabase session error during activation:', err);
+      }
+    })();
+  </script>
+
+</body>
+</html>

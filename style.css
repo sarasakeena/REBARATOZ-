@@ -259,6 +259,28 @@ img {
   align-items: center;
 }
 
+/* Place logo and auth actions to the left while keeping nav centered */
+.logo-link {
+  display: flex;
+  align-items: center;
+  position: static;
+}
+
+.nav-actions {
+  position: static;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+/* ensure logo image has a predictable width so calc() behaves consistently */
+/* logo image sizing handled below */
+
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
 .logo-img {
   height: 48px;
   width: auto;
@@ -309,6 +331,17 @@ img {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+.nav-login-btn {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  transition: color var(--transition-fast);
+}
+
+.header.scrolled .nav-login-btn {
+  color: #000000;
 }
 
 .header .btn-outline {
@@ -649,6 +682,15 @@ img {
 
 .about-text h2 {
   margin-bottom: 1.5rem;
+}
+
+.about-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .about-text p {
@@ -1642,6 +1684,17 @@ textarea.form-input {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  /* Revert header positioning on smaller screens */
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .logo-link,
+  .nav-actions {
+    position: static;
+    transform: none;
   }
   
   .feature-row {

@@ -152,11 +152,29 @@
     let isLoginMode = true;
 
     // ─── Auto-redirect if already logged in ──────────────────────────
+    // Only send to dashboard if subscription is active.
+    // Unpaid/new users stay on auth or go to pricing page.
     (async () => {
       try {
         const { data: { session } } = await sb.auth.getSession();
         if (session) {
-          window.location.href = 'dashboard.html';
+          // Check if this user has an active subscription
+          const { data: subscription } = await sb
+            .from('subscriptions')
+            .select('status')
+            .eq('user_id', session.user.id)
+            .maybeSingle();
+
+          const isActive = subscription && subscription.status === 'activated';
+
+          if (isActive) {
+            // Paying customer — go straight to their workspace
+            window.location.href = 'dashboard.html';
+          } else {
+            // Logged in but not subscribed — show auth page normally
+            // so they can see they're signed in and navigate to pricing
+            authCard.classList.add('auth-card-visible');
+          }
         } else {
           authCard.classList.add('auth-card-visible');
         }
@@ -243,12 +261,22 @@
       try {
         if (isLoginMode) {
           // LOGIN
-          const { error } = await sb.auth.signInWithPassword({ email, password });
+          const { error, data: { user } } = await sb.auth.signInWithPassword({ email, password });
           if (error) {
             showError(mapAuthError(error.message));
           } else {
-            showSuccess('Login successful! Redirecting…');
-            setTimeout(() => { window.location.href = 'dashboard.html'; }, 800);
+            showSuccess('Login successful! Checking your subscription…');
+            // Check subscription to decide where to send the user
+            const { data: subscription } = await sb
+              .from('subscriptions')
+              .select('status')
+              .eq('user_id', user.id)
+              .maybeSingle();
+
+            const isActive = subscription && subscription.status === 'activated';
+            setTimeout(() => {
+              window.location.href = isActive ? 'dashboard.html' : 'index.html#pricing';
+            }, 800);
           }
         } else {
           // SIGNUP
